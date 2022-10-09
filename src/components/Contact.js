@@ -1,6 +1,7 @@
 import React from 'react';
+import Rainbow from '../other/Rainbow'
 
-const Contact = () => {
+const Contact = (props) => {
     return (
         <div>
             <div className="container">
@@ -11,4 +12,4 @@ const Contact = () => {
     );
 };
 
-export default Contact;
+export default Rainbow(Contact);
