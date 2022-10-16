@@ -1,12 +1,14 @@
 import React from 'react';
 
-const Rainbow = (WrappedComponent) => {
-    const colours = ['red', 'green', 'purple', 'yellow', 'orage', 'blue'];
-    const randomColour = colours[Math.floor(Math.random() * 6)];
-    const className = randomColour + '-text';
+function getRandomColor() {
+    const colours = ['red', 'green', 'purple', 'yellow', 'orange', 'blue'];
+    return colours[Math.floor(Math.random() * 6)] + '-text';
+}
 
+const Rainbow = (WrappedComponent) => {
+    
     return (props) => (
-        <div className={className}>
+        <div className={getRandomColor()}>
             <WrappedComponent {...props} />
         </div>
     );
